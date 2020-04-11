@@ -1,7 +1,24 @@
-<ul *ngFor="let person of persons">
+
+ 
+
+<ul *ngFor="let person of persons" (click)="Sec(person)" style="cursor: pointer;">
   <li>    
-    Ad : {{person.name}} Yaş : {{person.age}}
+    İsim : {{person.name}} Yaş : {{person.age}}
   </li>
 </ul>
+
+<br>
+
+<div *ngIf="kisi">
+Seçilen Kişi {{kisi}}
+</div>
+
+
+<ul [ngSwitch]="kisi">
+  <li *ngSwitchCase="'Ahmet'">Merhaba Ahmet</li>
+  <li *ngSwitchCase="'Hasan'">Merhaba Hasan</li>
+  <li *ngSwitchCase="'Mehmet'">Merhaba Mehmet </li>
+  <li *ngSwitchDefault>Ahmet</li>
+</ul>  
 
 

@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  
+
   persons: any[];
- 
+  kisi: string = "";
+
   constructor() {
 
     this.persons = [
@@ -18,5 +19,9 @@ export class AppComponent {
       { name: 'Hasan', age: 15 }
     ];
   }
-  
+
+  Sec(secilen: any) {
+    this.kisi = secilen.name
+  }
+
 }
